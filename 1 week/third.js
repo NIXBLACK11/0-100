@@ -22,3 +22,7 @@ function sum1(a, b, fncToCall) {
 }
 
 sum1(1, 2, displayResultPassive);
+
+sum1(1, 2, function (data) {
+    console.log('sum : '+data)
+})
