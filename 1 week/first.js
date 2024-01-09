@@ -16,4 +16,5 @@ let n = allUsers.length
 for(let i=0;i<n;i++)
 {
     console.log(allUsers[i]["firstName"]);
+    console.log(allUsers[i].gender);
 }
