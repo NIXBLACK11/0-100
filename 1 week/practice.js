@@ -1,6 +1,8 @@
 //basic
 function test(callback) {
-    callback("hello");
+    setTimeout(function() {
+        callback("hello")
+    }, 5000);
 }
 
 function main() {
@@ -13,7 +15,9 @@ function main() {
 //promises
 function test() {
     let p = new Promise(function (resolve) {
-        resolve("hello");
+        setTimeout(function() {
+            resolve("hello");
+        }, 5000);
     });
     return p;
 }
@@ -28,7 +32,9 @@ function main() {
 // async await
 function test() {
     let p = new Promise(function (resolve) {
-        resolve("hello");
+        setTimeout(function() {
+            resolve("hello");
+        }, 5000);
     });
     return p;
 }
