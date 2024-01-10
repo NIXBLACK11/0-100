@@ -11,3 +11,9 @@ promises
 ![Alt text](image-3.png)
 
 ![Alt text](image-4.png)
+
+![Alt text](image-5.png)
+
+use of await solves the problem I wa sencountering in the hasjtag finder app
+
+![Alt text](image-6.png)
