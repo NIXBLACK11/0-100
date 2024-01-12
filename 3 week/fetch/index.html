@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example Site</title>
+    </head>
+    <body>
+        <script>
+            // function getAnimalData() {
+            //     fetch('https://fakerapi.it/api/v1/persons', { method: "GET" })
+            //     .then(function(response) {
+            //         const json = response.json()
+            //         .then(function(finalData) {
+            //             console.log(finalData)
+            //         })
+            //     });
+            // } 
+
+            async function getAnimalData() {
+                const result = await fetch("https://fakerapi.it/api/v1/persons");
+                const finalData = await result.json();
+                console.log(finalData);
+            }
+        </script>
+        <h1>Get Animal Data</h1>
+        <button onclick="getAnimalData()">Get Animal Data</button>
+    </body>
+</html>
