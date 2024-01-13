@@ -34,3 +34,8 @@ There are  types of middlewares:
         };
 
 if error in any request this will get called
+
+
+
+# JWT
+![Alt text](image-2.png)
