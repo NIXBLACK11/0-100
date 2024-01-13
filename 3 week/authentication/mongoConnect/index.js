@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken")
 const mongoose = require("mongoose")
 const jwtPassword = "123456"
 
-mongoose.connect("mongodb+srv://NIXBLACK:nixblack11@cluster0.tk5azpj.mongodb.net/100xTest")
+mongoose.connect("----")
 
 const User = mongoose.model("Users", {
     name: String,
