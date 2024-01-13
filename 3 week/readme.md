@@ -2,6 +2,8 @@ app.use(func)
 
 these are the middle ware applied to all the requests
 
+![Alt text](image-1.png)
+
 - The without middleware as the name suggests use no middle ware logic so we have to create multiple repeatitions of the same code.
 - the withmiddleare uses zod and some basic middleware
 - the totalmiddleware uses the best practices bearer token
