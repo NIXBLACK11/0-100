@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Hello</title>
+    </head>
+    <body>
+        <input id="firstInput" type="text"><br>
+        <input id="secondInput" type="text"><br>
+        <button onclick="myFunc()">Calculate sum</button>
+        <p id="para">ans</p>
+        <script>
+            function myFunc() {
+                var x = document.getElementById("firstInput").value;
+                var y = document.getElementById("secondInput").value;
+                var sum = parseFloat(x) + parseFloat(y);
+                document.getElementById("para").innerHTML = sum;
+            }
+        </script>
+    </body>
+</html>
