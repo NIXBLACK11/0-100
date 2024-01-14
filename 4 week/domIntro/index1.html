@@ -6,7 +6,7 @@
         let timeout;
         function debounced() {
             clearTimeout(timeout);
-            timeout = setTimeout(myFunc, 100);
+            timeout = setTimeout(myFunc, 1000);
         }
         function myFunc() {
             var x = document.getElementById("firstInput").value;
@@ -32,9 +32,9 @@
         }
     </script>
     <body>
-        <input id="firstInput" type="text"><br>
-        <input id="secondInput" type="text"><br>
-        <button onclick="debounced()">Calculate sum</button>
+        <input onchange="debounced()" id="firstInput" type="text"><br>
+        <input onchange="debounced()" id="secondInput" type="text"><br>
+        <button onclick="debounced()" >Calculate sum</button>
         <p id="para">ans</p>
     </body>
 </html>
