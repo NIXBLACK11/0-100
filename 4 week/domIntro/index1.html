@@ -2,18 +2,41 @@
     <head>
         <title>Hello</title>
     </head>
+    <script>
+        let timeout;
+        function debounced() {
+            clearTimeout(timeout);
+            timeout = setTimeout(myFunc, 100);
+        }
+        function myFunc() {
+            var x = document.getElementById("firstInput").value;
+            var y = document.getElementById("secondInput").value;
+            fetch("https://sum-server.100xdevs.com/sum?a="+x+"&b="+y)
+                .then(function(response) {
+                    console.log(response)
+                    response.text()
+                        .then(function(ans) {
+                            console.log(ans)
+                            document.getElementById("para").innerHTML = ans;
+                        });
+                });
+            // var sum = parseFloat(x) + parseFloat(y);
+            // document.getElementById("para").innerHTML = sum;
+        }
+        async function myFunc() {
+            var x = document.getElementById("firstInput").value;
+            var y = document.getElementById("secondInput").value;
+            var resp = await fetch("https://sum-server.100xdevs.com/sum?a="+x+"&b="+y)
+            const ans = await resp.text()
+            document.getElementById("para").innerHTML = ans;
+        }
+    </script>
     <body>
         <input id="firstInput" type="text"><br>
         <input id="secondInput" type="text"><br>
-        <button onclick="myFunc()">Calculate sum</button>
+        <button onclick="debounced()">Calculate sum</button>
         <p id="para">ans</p>
-        <script>
-            function myFunc() {
-                var x = document.getElementById("firstInput").value;
-                var y = document.getElementById("secondInput").value;
-                var sum = parseFloat(x) + parseFloat(y);
-                document.getElementById("para").innerHTML = sum;
-            }
-        </script>
     </body>
 </html>
+
+<!-- https://sum-server.100xdevs.com/sum?a=1&b=200 -->
