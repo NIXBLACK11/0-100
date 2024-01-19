@@ -19,3 +19,5 @@ Status Code	Meaning	When to Return
 502	Bad Gateway	Invalid response received from upstream server
 503	Service Unavailable	Server is not ready to handle the request
 504	Gateway Timeout	Timeout while waiting for a response from upstream server
+
+        npm create vite@latest

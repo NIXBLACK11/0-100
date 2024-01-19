@@ -13,8 +13,8 @@ router.post('/', async(req, res) => {
         return;
     }
     await todo.create({
-        title: parsedPayload.title,
-        description: parsedPayload.description,
+        title: createPayload.title,
+        description: createPayload.description,
         completed: false
     })
 

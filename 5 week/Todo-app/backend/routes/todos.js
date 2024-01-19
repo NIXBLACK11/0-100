@@ -3,7 +3,7 @@ const router = express.Router();
 const { todo } = require("../db");
 
 router.get('/', async(req, res) => {
-    const todos = await todos.find({});
+    const todos = await todo.find({});
     res.status(200).json({
         todos
     });
