@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { updateTodo } = require("../types");
 
-router.put('/', (req, res) => {
+router.put('/', async(req, res) => {
     const updatePayload = req.body;
     const parsedPayload = updateTodo.parse(updatePayload);
     if(!parsedPayload.success) {
@@ -11,7 +11,14 @@ router.put('/', (req, res) => {
         });
         return;
     }
-    
+    await todo.update({
+        _id: req.body.id
+    }, {
+        completed: true
+    })
+    res.status(200).json({
+        msg: "todo updated"
+    })
 });
 
 module.exports = router;

@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const { createTodo } = require("../types");
+const { todo } = require("../db");
 
-router.post('/', (req, res) => {
+router.post('/', async(req, res) => {
     const createPayload = req.body;
     const parsedPayload = createTodo.safeParse(createPayload);
     if(!parsedPayload.success) {
@@ -11,7 +12,15 @@ router.post('/', (req, res) => {
         })
         return;
     }
-    
+    await todo.create({
+        title: parsedPayload.title,
+        description: parsedPayload.description,
+        completed: false
+    })
+
+    res.json({
+        msg: "Todo created"
+    })
 });
 
 module.exports = router;
