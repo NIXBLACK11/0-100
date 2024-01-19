@@ -21,3 +21,6 @@ Status Code	Meaning	When to Return
 504	Gateway Timeout	Timeout while waiting for a response from upstream server
 
         npm create vite@latest
+
+        render network for backend
+        vercel for frontend
