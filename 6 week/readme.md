@@ -16,3 +16,5 @@
         }
 
         export default App
+
+useEffect renders only one time when component mounts
