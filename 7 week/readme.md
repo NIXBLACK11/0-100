@@ -1,0 +1,3 @@
+- routing
+- prop drilling
+- context api
