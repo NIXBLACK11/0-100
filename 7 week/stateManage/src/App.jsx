@@ -1,6 +1,7 @@
 import { useRecoilState, useRecoilValue, RecoilRoot } from 'recoil';
 import './App.css';
-import countAtom from "./store/atoms/count";
+import { countAtom } from "./store/atoms/count";
+import { evenSelector } from './store/atoms/count';
 
 function App() {
 
@@ -17,6 +18,7 @@ function Count() {
   return <div>
     <CountRenderer/>
     <Buttons/>
+    <Display/>
   </div>
 }
 
@@ -37,6 +39,16 @@ function Buttons() {
     <button onClick={() => {
       setCount(count-1);
     }}>Decrease</button>
+  </div>
+}
+
+
+//But a display is a dervied dependency we can use something like useMemo but for recoilers
+function Display() {
+  // const count = useRecoilValue(countAtom);
+  const isEven = useRecoilValue(evenSelector);
+  return <div>
+    it is {isEven ? "even": "odd"}
   </div>
 }
 
