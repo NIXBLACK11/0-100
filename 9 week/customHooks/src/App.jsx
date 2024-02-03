@@ -2,13 +2,15 @@ import './App.css';
 import React, { Component, useEffect, useState } from "react";
 
 import DataFetchHooks from './DataFetchHooks';
+import CheckOnlineHook from './CheckOnlineHook';
 
 function App() {
   return (
     <>
       {/* <MyComponent1/>
       <MyComponent2/> */}
-      <DataFetchHooks/>
+      {/* <DataFetchHooks/> */}
+      <CheckOnlineHook/>
     </>
   );
 }
