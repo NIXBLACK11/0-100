@@ -18,6 +18,10 @@ function DebounceHook() {
     const [inputValue, setInputValue] = useState('');
     const debounceValue = useDebounce(inputValue, 500);
 
+    useEffect(() => {
+        //fetch data from the backend
+    }, [debounceValue]);
+
     return <div>
         Debounced value is {debounceValue}<br/>
         <input
