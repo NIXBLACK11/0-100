@@ -3,6 +3,7 @@ import React, { Component, useEffect, useState } from "react";
 
 import DataFetchHooks from './DataFetchHooks';
 import CheckOnlineHook from './CheckOnlineHook';
+import DebounceHook from './DebounceHook';
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       {/* <MyComponent1/>
       <MyComponent2/> */}
       {/* <DataFetchHooks/> */}
-      <CheckOnlineHook/>
+      {/* <CheckOnlineHook/> */}
+      <DebounceHook/>
     </>
   );
 }
