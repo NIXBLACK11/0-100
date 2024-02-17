@@ -1,6 +1,6 @@
 type numberId = number | string;
 
-function greet(id: numberId) {
+function greet1(id: numberId) {
     console.log(`${id}`);
 }
 
@@ -22,5 +22,5 @@ const t: TechLead = {
     department: "HR"
 }
 
-greet("1");
-greet(1);
+greet1("1");
+greet1(1);
