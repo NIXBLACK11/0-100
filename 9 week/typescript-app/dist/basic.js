@@ -7,5 +7,11 @@ function greet(firstName) {
 function sum(a, b) {
     return (a + b);
 }
+function runAfter(fn) {
+    setTimeout(fn, 1000);
+}
+function fn() {
+    console.log("hey");
+}
 greet("Siddharth");
 sum(1, 3);
