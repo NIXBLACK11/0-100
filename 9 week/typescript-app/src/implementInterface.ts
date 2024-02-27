@@ -21,4 +21,4 @@ class Employee implements Person {
 const emp1 = new Employee("Siddharth rana", 20);
 emp1.greet("Hello ");
 
-console.log(emp1.name);
+console.log(emp1.name); 
