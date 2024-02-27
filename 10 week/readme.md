@@ -1,5 +1,5 @@
       ```bash
-      docker run --name my-postgres -e POSTGRES_PASSWORD=Nixblack@11 -d -p 5432:5432 postgres
+      sudo docker run --name my-postgres -e POSTGRES_PASSWORD=Nixblack@11 -d -p 5432:5432 postgres
       sudo postgresql://postgress:Nixblack@11@localhost:5432/postgres?sslmode=disable
       sudo psql -h localhost -d postgres -U postgres
       ```
