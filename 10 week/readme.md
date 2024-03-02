@@ -1,7 +1,9 @@
       ```bash
       sudo docker run --name my-postgres -e POSTGRES_PASSWORD=Nixblack@11 -d -p 5432:5432 postgres
-      sudo postgresql://postgress:Nixblack@11@localhost:5432/postgres?sslmode=disable
+      sudo postgresql://postgres:Nixblack@11@localhost:5432/postgres?sslmode=disable
       sudo psql -h localhost -d postgres -U postgres
+
+      \dt to see databses in psql
       ```
 
 To see the currently running containers and close them, you can follow these steps:
@@ -51,3 +53,15 @@ To see the currently running containers and close them, you can follow these ste
    This command will remove all stopped containers from your system.
 
 Please note that stopping and removing containers will not remove the Docker images used to create those containers. If you also want to remove the Docker images, you can use the `docker image prune` command to remove all unused images from your system.
+
+
+
+# setupt typescript backend with postgresql
+
+npm init -y
+npx tsc --init
+rootDir ./src
+outDir ./dist
+
+npm install pg
+npm install @types/pg
