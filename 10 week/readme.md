@@ -65,3 +65,9 @@ outDir ./dist
 
 npm install pg
 npm install @types/pg
+
+to add prisma
+npx prisma init
+
+to migrate 
+npx prisma migrate dev --name UserAndTodoAdded
