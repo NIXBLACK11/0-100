@@ -85,3 +85,6 @@ inport z from 'zod';
 const stringZodSchema = z.string();
 type stringZodType = z.interface<typeof stringZodSchema>;
 ```
+
+## To publish repo
+npm publish --access=public
