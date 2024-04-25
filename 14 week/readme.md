@@ -6,3 +6,14 @@
 
 getting started 
 npx create-next-app@latest
+
+
+
+in the files you want to use the client side (The server doesn't understand) example onClick
+
+use 
+```javascript
+"use client"
+```
+This means the client component should be as low as possible in the tree
+![Alt text](image-1.png)
