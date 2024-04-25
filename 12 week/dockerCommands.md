@@ -13,7 +13,7 @@ docker kill 324234324fewr43
 - to get inside a container
 
 ```bash
-docker exec -it egegewsg88 /bin.bash
+docker exec -it egegewsg88 /bin/bash
 ```
 
 # MongoDB
