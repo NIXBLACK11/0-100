@@ -6,3 +6,8 @@
 ```bash
 npx create-turbo@latest
 ```
+
+```bash
+cd packages/ui
+npm run generate:component
+```
