@@ -99,3 +99,21 @@ export const getServerSideProps = async () => {
   return { props: { posts } }
 }
 ```
+
+
+## Important
+
+To make a call again like signin you will sen http from sderver to server which is not sufficient
+
+make a folder actions
+and transfer the function isside files int his
+
+still a request is sent but not using axios and can be simply used like a function
+
+need to specify 
+
+"use server"
+
+as this will be called in the "use client"
+
+so the browser should be told explicitly that this is a serever funcion
