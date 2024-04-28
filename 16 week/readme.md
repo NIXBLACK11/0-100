@@ -11,3 +11,8 @@ npx create-turbo@latest
 cd packages/ui
 npm run generate:component
 ```
+
+- you can add frontend easily by going in the app folder and initializing a react/next/angular project
+- similarly you can add a backend in the same app folder
+
+also good practice on the tsconfig and see example from the turbo repo documentation
