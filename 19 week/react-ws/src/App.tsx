@@ -4,7 +4,7 @@ import './App.css'
 function App() {
   const [socket, setSocket] = useState<WebSocket | null>(null);
   const [messages, setMessages] = useState<string[]>([]);
-  const [mess, setMess] = useState();
+  const [mess, setMess] = useState<string>();
 
   useEffect(() => {
     const socket = new WebSocket('ws://localhost:8080');
@@ -17,7 +17,9 @@ function App() {
       console.log('Received message', message.data);
       setMessages((m) => [...m, message.data]);
     };
-    setSocket(socket);
+    return () => {
+      socket.close();
+    }
   }, []);
 
   if (socket) {
