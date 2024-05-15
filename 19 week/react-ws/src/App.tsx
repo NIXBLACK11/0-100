@@ -4,7 +4,7 @@ import './App.css'
 function App() {
   const [socket, setSocket] = useState<WebSocket | null>(null);
   const [messages, setMessages] = useState<string[]>([]);
-  const [mess, setMess] = useState<string>();
+  const [_mess, setMess] = useState<string>();
 
   useEffect(() => {
     const socket = new WebSocket('ws://localhost:8080');
